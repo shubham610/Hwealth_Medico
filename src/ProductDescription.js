@@ -5,6 +5,7 @@ import Footer from "./Footer";
 import { isDisabled } from "@testing-library/user-event/dist/utils";
 
 const ProductDescription = ({cart,setCart}) => {
+  const [incart, setincart] = useState(false)
   const { state } = useLocation();
   const [disabled, setdisabled] = useState(false)
   if(state===null){
@@ -18,8 +19,9 @@ const ProductDescription = ({cart,setCart}) => {
   if(!data.in_stock&&!disabled){
     setdisabled(true)
   }
-    if(cart&&doesExistSome&&!disabled){
+    if(cart&&doesExistSome&&!disabled&&!incart){
     setdisabled(true)
+    setincart(true)
     return
   }
   const {
@@ -103,18 +105,24 @@ const ProductDescription = ({cart,setCart}) => {
               {in_stock ? "In Stock" : "Out of Stock"}
             </p>
 
-            <button disabled={disabled} onClick={ ()=>{
-              
-            if(!cart){
-              console.log("testing");
-              setCart([data])
-            }else{
-             setCart([...cart,data])
-            }
-            setdisabled(true)
-          }} className="disabled:opacity-50 bg-cyan-800 text-white px-6 py-3 rounded-md hover:bg-cyan-900 focus:outline-none focus:shadow-outline-cyan active:bg-cyan-800">
-              Add to Cart
-            </button>
+          {!incart&&<button disabled={disabled} onClick={ ()=>{
+            
+          if(!cart){
+            console.log("testing");
+            setCart([data])
+          }else{
+            setCart([...cart,data])
+          }
+          setdisabled(true)
+          setincart(true)
+        }} className="disabled:opacity-50 bg-cyan-800 text-white px-6 py-3 rounded-md hover:bg-cyan-900 focus:outline-none focus:shadow-outline-cyan active:bg-cyan-800">
+            Add to Cart
+          </button>}
+
+            {incart&&<button disabled={disabled} className="disabled:opacity-50 bg-red-800 text-white px-6 py-3 rounded-md hover:bg-red-900 focus:outline-none focus:shadow-outline-cyan active:bg-red-800">
+                Added to Cart
+              </button>}
+
           </div>
         </div>
 
