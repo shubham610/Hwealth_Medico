@@ -1,6 +1,7 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 const ProductDescription = () => {
   const { state } = useLocation();
@@ -170,6 +171,7 @@ const ProductDescription = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </>
   );
 };

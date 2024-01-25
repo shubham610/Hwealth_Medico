@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import ProductCard from "./ProductCard";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 const Home = () => {
   const [data, setdata] = useState("");
@@ -74,6 +75,7 @@ const Home = () => {
           );
         })}
       </div>
+      <Footer/>
     </>
   );
 };

@@ -53,7 +53,7 @@ const Navbar = () => {
               <li>
                 <a
                   href="#"
-                  class="block py-2 px-3 text-white bg-cyan-300 rounded md:bg-transparent md:text-cyan-300 md:p-0 md:dark:text-cyan-100"
+                  class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-cyan-300 md:p-0 md:dark:hover:text-cyan-100 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                   aria-current="page"
                 >
                   Home
