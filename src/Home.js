@@ -4,7 +4,7 @@ import ProductCard from "./ProductCard";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 
-const Home = () => {
+const Home = ({cart,setCart}) => {
   const [data, setdata] = useState("");
 
   useEffect(() => {
@@ -19,6 +19,7 @@ const Home = () => {
     console.log("Loading");
     return <div>Loading ....</div>;
   }
+  
   return (
     <>
       <Navbar />
@@ -70,6 +71,8 @@ const Home = () => {
             <ProductCard
               data={e}
               key={i}
+              cart={cart}
+              setCart={setCart}
               src="https://t4.ftcdn.net/jpg/02/81/42/77/360_F_281427785_gfahY8bX4VYCGo6jlfO8St38wS9cJQop.jpg"
             />
           );

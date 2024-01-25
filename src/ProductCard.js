@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-const ProductCard = ({ data, src }) => {
+const ProductCard = ({ data, src,cart,setCart }) => {
+  const [disabled, setdisabled] = useState(false)
+  const doesExistSome =cart&& cart.some(item => item.id === data.id);
+  if(!data.in_stock&&!disabled){
+    setdisabled(true)
+  }
+  if(cart&&doesExistSome&&!disabled){
+  setdisabled(true)
+  return
+}
+
   return (
     <div class="size-4/5 md:size-3/12 max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
       <Link to={"/product"} state={{ data, src }}>
@@ -69,12 +79,22 @@ const ProductCard = ({ data, src }) => {
           <span class="text-3xl font-bold text-gray-900 dark:text-white">
             Rs.{Math.round(data.price.final_price * 50)}
           </span>
-          <a
-            href="#"
-            class="text-white bg-cyan-700 hover:bg-cyan-800 focus:ring-4 focus:outline-none focus:ring-cyan-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800"
+          <button
+          disabled={disabled}
+          onClick={ ()=>{
+              
+            if(!cart){
+              console.log("testing");
+              setCart([data])
+            }else{
+             setCart([...cart,data])
+            }
+            setdisabled(true)
+          }}
+            class="disabled:opacity-50 text-white bg-cyan-700 hover:bg-cyan-800 focus:ring-4 focus:outline-none focus:ring-cyan-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800"
           >
             Add to cart
-          </a>
+          </button>
         </div>
       </div>
     </div>

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 const Navbar = () => {
   const [menu, setmenu] = useState(false);
   return (
@@ -83,6 +84,13 @@ const Navbar = () => {
                   Contact
                 </a>
               </li>
+              <li>
+                <Link to="/cart"
+                  class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-cyan-300 md:p-0 md:dark:hover:text-cyan-100 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                >
+                  Cart
+                </Link>
+              </li>
             </ul>
           </div>
           <div class="" id="mobile-menu" hidden={!menu}>
@@ -102,6 +110,9 @@ const Navbar = () => {
               <a class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">
                 Contact
               </a>
+              <Link to="/cart" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">
+                Cart
+              </Link>
             </div>
           </div>
         </div>

@@ -1,11 +1,27 @@
-import React from "react";
-import { useLocation } from "react-router-dom";
+import React, { useState } from "react";
+import { Navigate, useLocation } from "react-router-dom";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import { isDisabled } from "@testing-library/user-event/dist/utils";
 
-const ProductDescription = () => {
+const ProductDescription = ({cart,setCart}) => {
   const { state } = useLocation();
-  const data = state.data;
+  const [disabled, setdisabled] = useState(false)
+  if(state===null){
+    return(
+<Navigate to="/"/>
+    )
+   
+  }
+  const data=state.data;
+  const doesExistSome =cart&& cart.some(item => item.id === data.id);
+  if(!data.in_stock&&!disabled){
+    setdisabled(true)
+  }
+    if(cart&&doesExistSome&&!disabled){
+    setdisabled(true)
+    return
+  }
   const {
     name,
     manufacturer,
@@ -41,6 +57,7 @@ const ProductDescription = () => {
     },
   ];
 
+ 
   return (
     <>
       <Navbar />
@@ -86,7 +103,16 @@ const ProductDescription = () => {
               {in_stock ? "In Stock" : "Out of Stock"}
             </p>
 
-            <button className="bg-cyan-500 text-white px-6 py-3 rounded-md hover:bg-cyan-600 focus:outline-none focus:shadow-outline-cyan active:bg-cyan-800">
+            <button disabled={disabled} onClick={ ()=>{
+              
+            if(!cart){
+              console.log("testing");
+              setCart([data])
+            }else{
+             setCart([...cart,data])
+            }
+            setdisabled(true)
+          }} className="disabled:opacity-50 bg-cyan-800 text-white px-6 py-3 rounded-md hover:bg-cyan-900 focus:outline-none focus:shadow-outline-cyan active:bg-cyan-800">
               Add to Cart
             </button>
           </div>
