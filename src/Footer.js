@@ -3,7 +3,7 @@ import React from 'react'
 const Footer = () => {
   return (
    <>
-   <footer class="bg-gray-900 text-white p-8 mt-8">
+   <footer class="bg-cyan-900 text-white p-8 mt-8">
     <div class="container mx-auto flex flex-wrap items-center">
       <div class="w-full md:w-1/2 lg:w-1/4 mb-6 lg:mb-0">
         <img src="/png/logo-no-background.png" alt="Hwealth Logo" class="size-1/2 mb-4"/>

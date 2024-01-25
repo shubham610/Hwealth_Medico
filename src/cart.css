@@ -1,0 +1,10 @@
+.nav-hidden::-webkit-scrollbar {
+    display: none;
+  }
+  
+  
+  .nav-hidden {
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+  }
+
