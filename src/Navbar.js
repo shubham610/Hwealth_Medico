@@ -52,37 +52,33 @@ const Navbar = () => {
           >
             <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
               <li>
-                <a
-                  href="#"
+                <Link to="/"
                   class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-cyan-300 md:p-0 md:dark:hover:text-cyan-100 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                   aria-current="page"
                 >
                   Home
-                </a>
+                  </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link to="/about"
                   class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-cyan-300 md:p-0 md:dark:hover:text-cyan-100 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                 >
                   About
-                </a>
+                  </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link to="/labtest"
                   class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-cyan-300 md:p-0 md:dark:hover:text-cyan-100 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                 >
                   Lab Tests
-                </a>
+                  </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link to="/contact"
                   class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-cyan-300 md:p-0 md:dark:hover:text-cyan-100 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                 >
                   Contact
-                </a>
+                  </Link>
               </li>
               <li>
                 <Link to="/cart"
@@ -95,21 +91,24 @@ const Navbar = () => {
           </div>
           <div class="" id="mobile-menu" hidden={!menu}>
             <div class="space-y-1 px-2 pb-3 pt-2">
-              <a
+            <Link to="/"
                 class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
                 aria-current="page"
               >
                 Home
-              </a>
-              <a class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">
+              </Link>
+              <Link to="/about"
+              class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">
                 About
-              </a>
-              <a class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">
+              </Link>
+              <Link to="/labtest"
+              class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">
                 Lab Tests
-              </a>
-              <a class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">
+              </Link>
+              <Link to="/contact" 
+              class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">
                 Contact
-              </a>
+              </Link>
               <Link to="/cart" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">
                 Cart
               </Link>

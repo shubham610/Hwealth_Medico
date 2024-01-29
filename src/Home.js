@@ -19,7 +19,7 @@ const Home = ({cart,setCart}) => {
     console.log("Loading");
     return <div>Loading ....</div>;
   }
-  
+
   return (
     <>
       <Navbar />

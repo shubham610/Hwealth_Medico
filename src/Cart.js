@@ -27,252 +27,51 @@ const Cart = ({cart,setCart}) => {
             <div class="mt-8 h-80">
               <div class="flow-root">
                 <ul role="list" class="-my-6 divide-y divide-gray-200">
-                  <li class="flex py-6">
-                    <div class="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
-                      <img src="https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg" alt="Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt." class="h-full w-full object-cover object-center"></img>
-                    </div>
-
-                    <div class="ml-4 flex flex-1 flex-col">
-                      <div>
-                        <div class="flex justify-between text-base font-medium text-gray-900">
-                          <h3>
-                            <a href="#">Throwback Hip Bag</a>
-                          </h3>
-                          <p class="ml-4">₹90.00</p>
-                        </div>
-                        <p class="mt-1 text-sm text-gray-500">Salmon</p>
-                      </div>
-                      <div class="flex flex-1 items-end justify-between text-sm">
-
-                      <div class="flex gap-6">
-                        <p class="text-gray-500">Qty </p>
-                        <div class="relative flex items-center">
-                          <button type="button" id="decrement-button" data-input-counter-decrement="counter-input" class="flex-shrink-0 bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600 hover:bg-gray-200 inline-flex items-center justify-center border border-gray-300 rounded-md h-5 w-5 focus:ring-gray-100 dark:focus:ring-gray-700 focus:ring-2 focus￼utline-none">
-                            <svg class="w-2.5 h-2.5 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 2">
-                              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h16" />
-                            </svg>
-                          </button>
-                          <input type="text" id="counter-input" data-input-counter class="flex-shrink-0 text-gray-900 dark:text-white border-0 bg-transparent text-sm font-normal focus￼utline-none focus:ring-0 max-w-[2.5rem] text-center" placeholder="" value="12" required></input>
-                            <button type="button" id="increment-button" data-input-counter-increment="counter-input" class="flex-shrink-0 bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600 hover:bg-gray-200 inline-flex items-center justify-center border border-gray-300 rounded-md h-5 w-5 focus:ring-gray-100 dark:focus:ring-gray-700 focus:ring-2 focus￼utline-none">
-                              <svg class="w-2.5 h-2.5 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16" />
-                              </svg>
-                            </button>
-                        </div>
-                      </div>
-                        <div class="flex">
-                          <button type="button" class="font-medium text-cyan-600 hover:text-cyan-500">Remove</button>
-                        </div>
-
-                      </div>
-
-                    </div>
-                  </li>
-                  <li class="flex py-6">
-                    <div class="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
-                      <img src="https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg" alt="Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt." class="h-full w-full object-cover object-center"></img>
-                    </div>
-
-                    <div class="ml-4 flex flex-1 flex-col">
-                      <div>
-                        <div class="flex justify-between text-base font-medium text-gray-900">
-                          <h3>
-                            <a href="#">Throwback Hip Bag</a>
-                          </h3>
-                          <p class="ml-4">₹90.00</p>
-                        </div>
-                        <p class="mt-1 text-sm text-gray-500">Salmon</p>
-                      </div>
-                      <div class="flex flex-1 items-end justify-between text-sm">
-
-                      <div class="flex gap-6">
-                        <p class="text-gray-500">Qty </p>
-                        <div class="relative flex items-center">
-                          <button type="button" id="decrement-button" data-input-counter-decrement="counter-input" class="flex-shrink-0 bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600 hover:bg-gray-200 inline-flex items-center justify-center border border-gray-300 rounded-md h-5 w-5 focus:ring-gray-100 dark:focus:ring-gray-700 focus:ring-2 focus￼utline-none">
-                            <svg class="w-2.5 h-2.5 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 2">
-                              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h16" />
-                            </svg>
-                          </button>
-                          <input type="text" id="counter-input" data-input-counter class="flex-shrink-0 text-gray-900 dark:text-white border-0 bg-transparent text-sm font-normal focus￼utline-none focus:ring-0 max-w-[2.5rem] text-center" placeholder="" value="12" required></input>
-                            <button type="button" id="increment-button" data-input-counter-increment="counter-input" class="flex-shrink-0 bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600 hover:bg-gray-200 inline-flex items-center justify-center border border-gray-300 rounded-md h-5 w-5 focus:ring-gray-100 dark:focus:ring-gray-700 focus:ring-2 focus￼utline-none">
-                              <svg class="w-2.5 h-2.5 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16" />
-                              </svg>
-                            </button>
-                        </div>
-                      </div>
-                        <div class="flex">
-                          <button type="button" class="font-medium text-cyan-600 hover:text-cyan-500">Remove</button>
-                        </div>
-
-                      </div>
-
-                    </div>
-                  </li>
-                  <li class="flex py-6">
-                    <div class="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
-                      <img src="https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg" alt="Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt." class="h-full w-full object-cover object-center"></img>
-                    </div>
-
-                    <div class="ml-4 flex flex-1 flex-col">
-                      <div>
-                        <div class="flex justify-between text-base font-medium text-gray-900">
-                          <h3>
-                            <a href="#">Throwback Hip Bag</a>
-                          </h3>
-                          <p class="ml-4">₹90.00</p>
-                        </div>
-                        <p class="mt-1 text-sm text-gray-500">Salmon</p>
-                      </div>
-                      <div class="flex flex-1 items-end justify-between text-sm">
-
-                      <div class="flex gap-6">
-                        <p class="text-gray-500">Qty </p>
-                        <div class="relative flex items-center">
-                          <button type="button" id="decrement-button" data-input-counter-decrement="counter-input" class="flex-shrink-0 bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600 hover:bg-gray-200 inline-flex items-center justify-center border border-gray-300 rounded-md h-5 w-5 focus:ring-gray-100 dark:focus:ring-gray-700 focus:ring-2 focus￼utline-none">
-                            <svg class="w-2.5 h-2.5 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 2">
-                              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h16" />
-                            </svg>
-                          </button>
-                          <input type="text" id="counter-input" data-input-counter class="flex-shrink-0 text-gray-900 dark:text-white border-0 bg-transparent text-sm font-normal focus￼utline-none focus:ring-0 max-w-[2.5rem] text-center" placeholder="" value="12" required></input>
-                            <button type="button" id="increment-button" data-input-counter-increment="counter-input" class="flex-shrink-0 bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600 hover:bg-gray-200 inline-flex items-center justify-center border border-gray-300 rounded-md h-5 w-5 focus:ring-gray-100 dark:focus:ring-gray-700 focus:ring-2 focus￼utline-none">
-                              <svg class="w-2.5 h-2.5 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16" />
-                              </svg>
-                            </button>
-                        </div>
-                      </div>
-                        <div class="flex">
-                          <button type="button" class="font-medium text-cyan-600 hover:text-cyan-500">Remove</button>
-                        </div>
-
-                      </div>
-
-                    </div>
-                  </li>
-                  <li class="flex py-6">
-                    <div class="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
-                      <img src="https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg" alt="Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt." class="h-full w-full object-cover object-center"></img>
-                    </div>
-
-                    <div class="ml-4 flex flex-1 flex-col">
-                      <div>
-                        <div class="flex justify-between text-base font-medium text-gray-900">
-                          <h3>
-                            <a href="#">Throwback Hip Bag</a>
-                          </h3>
-                          <p class="ml-4">₹90.00</p>
-                        </div>
-                        <p class="mt-1 text-sm text-gray-500">Salmon</p>
-                      </div>
-                      <div class="flex flex-1 items-end justify-between text-sm">
-
-                      <div class="flex gap-6">
-                        <p class="text-gray-500">Qty </p>
-                        <div class="relative flex items-center">
-                          <button type="button" id="decrement-button" data-input-counter-decrement="counter-input" class="flex-shrink-0 bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600 hover:bg-gray-200 inline-flex items-center justify-center border border-gray-300 rounded-md h-5 w-5 focus:ring-gray-100 dark:focus:ring-gray-700 focus:ring-2 focus￼utline-none">
-                            <svg class="w-2.5 h-2.5 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 2">
-                              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h16" />
-                            </svg>
-                          </button>
-                          <input type="text" id="counter-input" data-input-counter class="flex-shrink-0 text-gray-900 dark:text-white border-0 bg-transparent text-sm font-normal focus￼utline-none focus:ring-0 max-w-[2.5rem] text-center" placeholder="" value="12" required></input>
-                            <button type="button" id="increment-button" data-input-counter-increment="counter-input" class="flex-shrink-0 bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600 hover:bg-gray-200 inline-flex items-center justify-center border border-gray-300 rounded-md h-5 w-5 focus:ring-gray-100 dark:focus:ring-gray-700 focus:ring-2 focus￼utline-none">
-                              <svg class="w-2.5 h-2.5 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16" />
-                              </svg>
-                            </button>
-                        </div>
-                      </div>
-                        <div class="flex">
-                          <button type="button" class="font-medium text-cyan-600 hover:text-cyan-500">Remove</button>
-                        </div>
-
-                      </div>
-
-                    </div>
-                  </li>
-                  <li class="flex py-6">
-                    <div class="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
-                      <img src="https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg" alt="Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt." class="h-full w-full object-cover object-center"></img>
-                    </div>
-
-                    <div class="ml-4 flex flex-1 flex-col">
-                      <div>
-                        <div class="flex justify-between text-base font-medium text-gray-900">
-                          <h3>
-                            <a href="#">Throwback Hip Bag</a>
-                          </h3>
-                          <p class="ml-4">₹90.00</p>
-                        </div>
-                        <p class="mt-1 text-sm text-gray-500">Salmon</p>
-                      </div>
-                      <div class="flex flex-1 items-end justify-between text-sm">
-
-                      <div class="flex gap-6">
-                        <p class="text-gray-500">Qty </p>
-                        <div class="relative flex items-center">
-                          <button type="button" id="decrement-button" data-input-counter-decrement="counter-input" class="flex-shrink-0 bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600 hover:bg-gray-200 inline-flex items-center justify-center border border-gray-300 rounded-md h-5 w-5 focus:ring-gray-100 dark:focus:ring-gray-700 focus:ring-2 focus￼utline-none">
-                            <svg class="w-2.5 h-2.5 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 2">
-                              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h16" />
-                            </svg>
-                          </button>
-                          <input type="text" id="counter-input" data-input-counter class="flex-shrink-0 text-gray-900 dark:text-white border-0 bg-transparent text-sm font-normal focus￼utline-none focus:ring-0 max-w-[2.5rem] text-center" placeholder="" value="12" required></input>
-                            <button type="button" id="increment-button" data-input-counter-increment="counter-input" class="flex-shrink-0 bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600 hover:bg-gray-200 inline-flex items-center justify-center border border-gray-300 rounded-md h-5 w-5 focus:ring-gray-100 dark:focus:ring-gray-700 focus:ring-2 focus￼utline-none">
-                              <svg class="w-2.5 h-2.5 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16" />
-                              </svg>
-                            </button>
-                        </div>
-                      </div>
-                        <div class="flex">
-                          <button type="button" class="font-medium text-cyan-600 hover:text-cyan-500">Remove</button>
-                        </div>
-
-                      </div>
-
-                    </div>
-                  </li>
-                  <li class="flex py-6">
-                    <div class="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
-                      <img src="https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-02.jpg" alt="Front of satchel with blue canvas body, black straps and handle, drawstring top, and front zipper pouch." class="h-full w-full object-cover object-center"></img>
-                    </div>
-
-                    <div class="ml-4 flex flex-1 flex-col">
-                      <div>
-                        <div class="flex justify-between text-base font-medium text-gray-900">
-                          <h3>
-                            <a href="#">Medium Stuff Satchel</a>
-                          </h3>
-                          <p class="ml-4">₹32.00</p>
-                        </div>
-                        <p class="mt-1 text-sm text-gray-500">Blue</p>
-                      </div>
-                      <div class="flex flex-1 items-end justify-between text-sm">
-                      <div class="flex gap-6">
-                        <p class="text-gray-500">Qty </p>
-                        <div class="relative flex items-center">
-                          <button type="button" id="decrement-button" data-input-counter-decrement="counter-input" class="flex-shrink-0 bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600 hover:bg-gray-200 inline-flex items-center justify-center border border-gray-300 rounded-md h-5 w-5 focus:ring-gray-100 dark:focus:ring-gray-700 focus:ring-2 focus￼utline-none">
-                            <svg class="w-2.5 h-2.5 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 2">
-                              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h16" />
-                            </svg>
-                          </button>
-                          <input type="text" id="counter-input" data-input-counter class="flex-shrink-0 text-gray-900 dark:text-white border-0 bg-transparent text-sm font-normal focus￼utline-none focus:ring-0 max-w-[2.5rem] text-center" placeholder="" value="12" required></input>
-                            <button type="button" id="increment-button" data-input-counter-increment="counter-input" class="flex-shrink-0 bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600 hover:bg-gray-200 inline-flex items-center justify-center border border-gray-300 rounded-md h-5 w-5 focus:ring-gray-100 dark:focus:ring-gray-700 focus:ring-2 focus￼utline-none">
-                              <svg class="w-2.5 h-2.5 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16" />
-                              </svg>
-                            </button>
-                        </div>
-                      </div>
-
-                        <div class="flex">
-                          <button type="button" class="font-medium text-cyan-600 hover:text-cyan-500">Remove</button>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  
-
+                    {cart?cart.map(
+                        item=>{
+                            return   <li class="flex py-6">
+                            <div class="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
+                              <img src="https://t4.ftcdn.net/jpg/02/81/42/77/360_F_281427785_gfahY8bX4VYCGo6jlfO8St38wS9cJQop.jpg" class="h-full w-full object-cover object-center"></img>
+                            </div>
+        
+                            <div class="ml-4 flex flex-1 flex-col">
+                              <div>
+                                <div class="flex justify-between text-base font-medium text-gray-900">
+                                  <h3>
+                                    <a href="#">{item.name}</a>
+                                  </h3>
+                                  <p class="ml-4">₹{Math.round(item.price.final_price.toFixed(2) * 50)}</p>
+                                </div>
+                                <p class="mt-1 text-sm text-gray-500">{item.form}</p>
+                              </div>
+                              <div class="flex flex-1 items-end justify-between text-sm">
+        
+                              <div class="flex gap-6">
+                                <p class="text-gray-500">Qty </p>
+                                <div class="relative flex items-center">
+                                  <button type="button" id="decrement-button" data-input-counter-decrement="counter-input" class="flex-shrink-0 bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600 hover:bg-gray-200 inline-flex items-center justify-center border border-gray-300 rounded-md h-5 w-5 focus:ring-gray-100 dark:focus:ring-gray-700 focus:ring-2 focus￼utline-none">
+                                    <svg class="w-2.5 h-2.5 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 2">
+                                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h16" />
+                                    </svg>
+                                  </button>
+                                  <input type="text" id="counter-input" data-input-counter class="flex-shrink-0 text-gray-900 dark:text-white border-0 bg-transparent text-sm font-normal focus￼utline-none focus:ring-0 max-w-[2.5rem] text-center" placeholder="" value="12" required></input>
+                                    <button type="button" id="increment-button" data-input-counter-increment="counter-input" class="flex-shrink-0 bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600 hover:bg-gray-200 inline-flex items-center justify-center border border-gray-300 rounded-md h-5 w-5 focus:ring-gray-100 dark:focus:ring-gray-700 focus:ring-2 focus￼utline-none">
+                                      <svg class="w-2.5 h-2.5 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16" />
+                                      </svg>
+                                    </button>
+                                </div>
+                              </div>
+                                <div class="flex">
+                                  <button type="button" class="font-medium text-cyan-600 hover:text-cyan-500">Remove</button>
+                                </div>
+        
+                              </div>
+        
+                            </div>
+                          </li>
+                        }
+                    ):<div class="flex justify-center items-center"><img className=' size-1/2' src='https://www.adasglobal.com/img/empty-cart.png'/></div>}
                   {/* <!-- More products... --> */}
                 </ul>
               </div>
