@@ -4,26 +4,22 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { CartContext } from "./CartContext";
 
-const ProductDescription = ({cart}) => {
-  const [incart, setincart] = useState(false)
+const ProductDescription = ({ cart }) => {
+  const [incart, setincart] = useState(false);
   const { state } = useLocation();
-  const cartContext=useContext(CartContext);
-  const [disabled, setdisabled] = useState(false)
-  if(state===null){
-    return(
-<Navigate to="/"/>
-    )
-   
+  const cartContext = useContext(CartContext);
+  const [disabled, setdisabled] = useState(false);
+  if (state === null) {
+    return <Navigate to="/" />;
   }
-  const data=state.data;
-  const doesExistSome =cart&& cart.some(item => item.id === data.id);
-  if(!data.in_stock&&!disabled){
-    setdisabled(true)
+  const data = state.data;
+  if (!data.in_stock && !disabled) {
+    setdisabled(true);
   }
-  if(cartContext.cartItems[data.id]>0&&!disabled&&!incart){
-    setdisabled(true)
-    setincart(true)
-    return
+  if (cartContext.cartItems[data.id] > 0 && !disabled && !incart) {
+    setdisabled(true);
+    setincart(true);
+    return;
   }
   const {
     name,
@@ -31,11 +27,9 @@ const ProductDescription = ({cart}) => {
     form,
     price,
     in_stock,
-    src,
     dosage,
     active_ingredients,
     side_effects,
-    delivery_time,
   } = data;
 
   // Placeholder reviews
@@ -60,7 +54,6 @@ const ProductDescription = ({cart}) => {
     },
   ];
 
- 
   return (
     <>
       <Navbar />
@@ -106,18 +99,28 @@ const ProductDescription = ({cart}) => {
               {in_stock ? "In Stock" : "Out of Stock"}
             </p>
 
-          {!incart&&<button disabled={disabled} onClick={()=>{
-          cartContext.addToCart(data.id);
-          setdisabled(true)
-          setincart(true)
-        }} className="disabled:opacity-50 bg-cyan-800 text-white px-6 py-3 rounded-md hover:bg-cyan-900 focus:outline-none focus:shadow-outline-cyan active:bg-cyan-800">
-            Add to Cart
-          </button>}
+            {!incart && (
+              <button
+                disabled={disabled}
+                onClick={() => {
+                  cartContext.addToCart(data.id);
+                  setdisabled(true);
+                  setincart(true);
+                }}
+                className="disabled:opacity-50 bg-cyan-800 text-white px-6 py-3 rounded-md hover:bg-cyan-900 focus:outline-none focus:shadow-outline-cyan active:bg-cyan-800"
+              >
+                Add to Cart
+              </button>
+            )}
 
-            {incart&&<button disabled={disabled} className="disabled:opacity-50 bg-red-800 text-white px-6 py-3 rounded-md hover:bg-red-900 focus:outline-none focus:shadow-outline-cyan active:bg-red-800">
+            {incart && (
+              <button
+                disabled={disabled}
+                className="disabled:opacity-50 bg-red-800 text-white px-6 py-3 rounded-md hover:bg-red-900 focus:outline-none focus:shadow-outline-cyan active:bg-red-800"
+              >
                 Added to Cart
-              </button>}
-
+              </button>
+            )}
           </div>
         </div>
 
@@ -200,7 +203,7 @@ const ProductDescription = ({cart}) => {
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 };
