@@ -2,96 +2,71 @@ import { createContext, useEffect, useState } from "react";
 
 export const CartContext = createContext(null);
 
-
-
 const getDefaultCart = (data) => {
+  let cart = {};
 
- let cart = {};
-
- for (let i = 0; i < data.length; i++) {
-
-  cart[data[i].id] = 0;
-
- }
- return cart;
-
+  for (let i = 0; i < data.length; i++) {
+    cart[data[i].id] = 0;
+  }
+  return cart;
 };
 
 export const CartContextProvider = (props) => {
-    const medicines=props.data;
+  const medicines = props.data;
 
- const [cartItems, setCartItems] = useState(getDefaultCart(props.data));
+  const [cartItems, setCartItems] = useState(getDefaultCart(props.data));
 
- const getTotalCartAmount = () => {
+  const getTotalCartAmount = () => {
+    let totalAmount = 0;
 
-  let totalAmount = 0;
+    for (const item in cartItems) {
+      if (cartItems[item] > 0) {
+        let itemInfo = props.data.find((product) => product.id === item);
 
-  for (const item in cartItems) {
+        totalAmount += Math.round(
+          cartItems[item] * itemInfo.price.final_price.toFixed(2) * 50
+        );
+      }
+    }
 
-   if (cartItems[item] > 0) {
+    return totalAmount;
+  };
 
-    let itemInfo = props.data.find((product) => product.id === item);
+  const addToCart = (itemId) => {
+    setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
+  };
 
-    totalAmount += cartItems[item] * itemInfo.price;
+  const removeFromCart = (itemId) => {
+    setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
+  };
 
-   }
+  const deleteItem = (itemId) => {
+    setCartItems((prev) => ({ ...prev, [itemId]: 0 }));
+  };
 
-  }
+  const checkout = () => {
+    setCartItems(getDefaultCart());
+  };
 
-  return totalAmount;
-
- };
-
- const addToCart = (itemId) => {
-
-  setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
-
- };
-
- const removeFromCart = (itemId) => {
-
-  setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
-
- };
-
- const updateCartItemCount = (newAmount, itemId) => {
-
-  setCartItems((prev) => ({ ...prev, [itemId]: newAmount }));
-
- };
-
- const checkout = () => {
-
-  setCartItems(getDefaultCart());
-
- };
-
- const contextValue = {
+  const contextValue = {
     medicines,
 
-  cartItems,
+    cartItems,
 
-  addToCart,
+    addToCart,
 
-  updateCartItemCount,
+    deleteItem,
 
-  removeFromCart,
+    removeFromCart,
 
-  getTotalCartAmount,
+    getTotalCartAmount,
 
-  checkout,
+    checkout,
+  };
 
- };
-
- return (
-
-  <CartContext.Provider value={contextValue}>
-
-   {props.children}
-
-  </CartContext.Provider>
-
- );
-
+  return (
+    <CartContext.Provider value={contextValue}>
+      {props.children}
+    </CartContext.Provider>
+  );
 };
-

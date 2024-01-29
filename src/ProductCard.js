@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "./CartContext";
 
-const ProductCard = ({ data, src,cart,setCart }) => {
+const ProductCard = ({ data, src}) => {
 
   const cartContext=useContext(CartContext);
 
