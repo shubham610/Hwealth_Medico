@@ -1,14 +1,18 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { CartContext } from "./CartContext";
 
 const ProductCard = ({ data, src,cart,setCart }) => {
+
+  const cartContext=useContext(CartContext);
+
+
   const [incart, setincart] = useState(false)
   const [disabled, setdisabled] = useState(false)
-  const doesExistSome =cart&& cart.some(item => item.id === data.id);
   if(!data.in_stock&&!disabled){
     setdisabled(true)
   }
-  if(cart&&doesExistSome&&!disabled&&!incart){
+  if(cartContext.cartItems[data.id]>0&&!disabled&&!incart){
     setdisabled(true)
     setincart(true)
     return
@@ -84,13 +88,7 @@ const ProductCard = ({ data, src,cart,setCart }) => {
         {!incart&&<button
         disabled={disabled}
         onClick={()=>{
-          
-          if(!cart){
-            console.log("testing");
-            setCart([data])
-          }else{
-            setCart([...cart,data])
-          }
+          cartContext.addToCart(data.id);
           setdisabled(true)
           setincart(true)
         }}

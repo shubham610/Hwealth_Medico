@@ -8,11 +8,31 @@ import Home from "./Home";
 import ProductDescription from "./ProductDescription";
 import ScrollToTop from "./ScrollToTop";
 import Cart from "./Cart";
+import { CartContextProvider } from "./CartContext";
 
 const App = () => {
   const [cart, setCart] = useState() 
+
+  const [data, setdata] = useState("");
+
+useEffect(() => {
+  const fetchData = async () => {
+    const data = await axios.get("http://localhost:3030/data");
+    setdata(data.data);
+  };
+  fetchData();
+}, []);
+
+if (!data) {
+  console.log("Loading");
+  return <div>Loading ....</div>;
+}
+
+
+
   return (
     <BrowserRouter>
+    <CartContextProvider data={data}>
     <ScrollToTop>
       <Routes>
         <Route path="" element={<Home cart={cart} setCart={setCart}/>} />
@@ -20,6 +40,7 @@ const App = () => {
         <Route path="/cart" element={<Cart cart={cart} setCart={setCart}/>} />
       </Routes>
       </ScrollToTop>
+      </CartContextProvider>
     </BrowserRouter>
   );
 };
