@@ -212,7 +212,7 @@ const Cart = () => {
               <div class="flex border-b py-1 justify-between max-w-xs">
                 <p class="mt-6 text-base text-gray-600">Shipping Estimate</p>
 
-                <p class="mt-6 text-base leading-5 text-gray-600">₹100</p>
+                <p class="mt-6 text-base leading-5 text-gray-600">{cartContext.getTotalCartAmount()>0?"₹100":"N/A"}</p>
               </div>
               <div class="flex border-b py-1 justify-between max-w-xs">
                 <p class="mt-6 text-base text-gray-600">Tax Estimate</p>
@@ -222,7 +222,7 @@ const Cart = () => {
               <div class="flex text-lg font-medium py-1 justify-between max-w-xs">
                 <p class="mt-6 text-gray-900">Order Total</p>
 
-                <p class="mt-6 leading-5 text-gray-900">{cartContext.getTotalCartAmount()*5/100+cartContext.getTotalCartAmount()+100}</p>
+                <p class="mt-6 leading-5 text-gray-900">{cartContext.getTotalCartAmount()>0?cartContext.getTotalCartAmount()*5/100+cartContext.getTotalCartAmount()+100:"N/A"}</p>
               </div>
               <div class="mt-6">
                 <a
