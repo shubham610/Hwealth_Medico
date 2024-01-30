@@ -1,0 +1,60 @@
+{
+  "diagnosis_states": [
+    {
+      "value": "",
+      "text": "Select Package"
+    },
+    {
+      "value": "Hmedico Swasthya",
+      "text": "Hmedico Swasthya"
+    },
+    {
+      "value": "Hmedico Shield Pack",
+      "text": "Hmedico Shield Pack"
+    },
+    {
+      "value": "Hmedico Health Pack",
+      "text": "Hmedico Health Pack"
+    },
+    {
+      "value": "Hmedico Diabetic Checkup",
+      "text": "Hmedico Diabetic Checkup"
+    },
+    {
+      "value": "Aarogyam B",
+      "text": "Aarogyam B"
+    },
+    {
+      "value": "Hmedico Healthy",
+      "text": "Hmedico Healthy"
+    },
+    {
+      "value": "Netmeds Diabetic check",
+      "text": "Netmeds Diabetic check"
+    },
+    {
+      "value": "Netmeds Healthy Plus",
+      "text": "Netmeds Healthy Plus"
+    },
+    {
+      "value": "Netmeds Healthy",
+      "text": "Netmeds Healthy"
+    },
+    {
+      "value": "Shield Pack",
+      "text": "Shield Pack"
+    },
+    {
+      "value": "Shield Pack Extended",
+      "text": "Shield Pack Extended"
+    },
+    {
+      "value": "Netmeds Pre screening",
+      "text": "Netmeds Pre screening"
+    },
+    {
+      "value": "Aarogyam X",
+      "text": "Aarogyam X"
+    }
+  ]
+}

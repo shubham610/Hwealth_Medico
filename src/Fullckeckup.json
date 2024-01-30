@@ -1,0 +1,42 @@
+{
+    "paths": [
+      {
+        "text": "Complete Hemogram",
+        "source": "png/WaterDrop.PNG"
+      },
+      {
+        "text": "Liver Profile",
+        "source": "png/Liver.PNG"
+      },
+      {
+        "text": "Diabetes",
+        "source": "png/Pancres.PNG"
+      },
+      {
+        "text": "Lipid Profile",
+        "source":"png/Lipid.PNG"
+      },
+      {
+        "text": "Thyroid Profile",
+        "source":"png/Somespecial.PNG"
+      },
+      {
+        "text": "Iron Deficiency",
+        "source": "png/Iron.PNG"
+      },
+      {
+        "text": "Vitamin",
+        "source": "png/bottle.PNG"
+      },
+      {
+        "text": "Testosterone",
+        "source":"png/Testostrone.PNG"
+      },
+      {
+        "text": "Kidney Function Test",
+        "source": "png/Kidney.PNG"
+      }
+    
+    ]
+  }
+  

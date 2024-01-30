@@ -1,0 +1,35 @@
+{
+    "diagnosis_test": [
+      {"value": "", "text": "Please Select Test", "id": "first_val"},
+      {"value": "Complete Hemogram", "text": "Complete Hemogram"},
+      {"value": "Liver Profile", "text": "Liver Profile"},
+      {"value": "Diabetes", "text": "Diabetes"},
+      {"value": "Lipid Profile", "text": "Lipid Profile"},
+      {"value": "Thyroid Profile", "text": "Thyroid Profile"},
+      {"value": "Iron Deficiency", "text": "Iron Deficiency"},
+      {"value": "Vitamin", "text": "Vitamin"},
+      {"value": "Testosterone", "text": "Testosterone"},
+      {"value": "Kidney Function Test", "text": "Kidney Function Test"},
+      {"value": "T3 - T4 -TSH", "text": "T3 - T4 -TSH"},
+      {"value": "TSH", "text": "TSH"},
+      {"value": "25 OH vitamin -D", "text": "25 OH vitamin -D"},
+      {"value": "Complete Urine routine", "text": "Complete Urine routine"},
+      {"value": "HBA1C", "text": "HBA1C"},
+      {"value": "PPBS (Post Prandial blood sugar)", "text": "PPBS (Post Prandial blood sugar)"},
+      {"value": "FBS (Fasting blood sugar)", "text": "FBS (Fasting blood sugar)"},
+      {"value": "Culture and sensitivity urine", "text": "Culture and sensitivity urine"},
+      {"value": "AMA (Anti microsomal antibody)", "text": "AMA (Anti microsomal antibody)"},
+      {"value": "Creatinine Serum", "text": "Creatinine Serum"},
+      {"value": "Uric Acid Serum", "text": "Uric Acid Serum"},
+      {"value": "CRP (C- reactive protein )", "text": "CRP (C- reactive protein )"},
+      {"value": "RF ( Rheumatoid Factor)", "text": "RF ( Rheumatoid Factor)"},
+      {"value": "CBC+ESR with P/S", "text": "CBC+ESR with P/S"},
+      {"value": "Beta Hcg", "text": "Beta Hcg"},
+      {"value": "Ft3-Ft4-Tsh", "text": "Ft3-Ft4-Tsh"},
+      {"value": "PRL ( Prolactin)", "text": "PRL ( Prolactin)"},
+      {"value": "Serum Electrolyte - Vitamin D Profile", "text": "Serum Electrolyte - Vitamin D Profile"},
+      {"value": "Vitamin B-12", "text": "Vitamin B-12"},
+      {"value": "Calcium", "text": "Calcium"}
+    ]
+  }
+  

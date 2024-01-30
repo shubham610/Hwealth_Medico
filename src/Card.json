@@ -1,0 +1,51 @@
+{
+    "cardval":[
+        {
+            "heading": "Hmedico Swasthya",
+            "text": "Book Regular Health Check-up Package Hmedico Swasthya, a Basic Screening Preventive Health Check-up Profile having 64 tests includes Diabetic, Lipid, LFT, KFT, Thyroid with Vitamins, & more.",
+            "price": 1300,
+            "discounted": 1100,
+            "url": "https://www.netmeds.com/images/cms/wysiwyg/health-packages/pathology/family.png",
+            "color": "#FFF4EB"
+        },
+        {
+            "heading": "Hmedico Shield Pack",
+            "text": "Shield Pack helps to protect against a particular danger or risk. It screens the most common diseases like CBC, Urine Routine, Creatinine, Uric Acid, FBS, HbA1c, Lipid profile, Total Bilirubin, SGPT, TSH and Calcium.",
+            "price": 1500,
+            "discounted": 899,
+            "url": "https://www.netmeds.com/images/cms/wysiwyg/health-packages/pathology/family.png",
+            "color": "#EAFAFF"
+        },
+        {
+            "heading": "Hmedico Health Pack",
+            "text": "Health check-ups are very useful in the early detection of all types of illnesses and risk factors. Simple to understand and less time consuming, our Hmedico Health Pack comprises 35 parameters of regular blood tests that have been specially designed keeping your health in mind.",
+            "price": 1000,
+            "discounted": 600,
+            "url": "https://www.netmeds.com/images/cms/wysiwyg/health-packages/pathology/Diabetes.png",
+            "color": "#F6FAE8"
+        }, {
+            "heading": "Hmedico Diabetic Checkup",
+            "text": "Meant for people who want to get regular reports to prevent/check their diabetes levels. It includes 49 tests..",
+            "price": 999,
+            "discounted": 690,
+            "url": "https://www.netmeds.com/images/cms/wysiwyg/health-packages/pathology/Antenatal_Care.png",
+            "color": "#EBFFFC"
+        },
+        {
+            "heading": "Aarogyam B",
+            "text": "Aarogyam BPreventive Basic Health Check-up Package Aarogyam B Consists of 67 blood tests for screening of the health status.",
+            "price": 1400,
+            "discounted": 1005,
+            "url": "https://www.netmeds.com/images/cms/wysiwyg/health-packages/pathology/Allergy.png",
+            "color": "#EBFFFC"
+        },
+        {
+            "heading": "Hmedico Healthy",
+            "text": "This package is specially designed for an elderly male and includes major blood tests which are required for diagnosis, evaluation and monitoring of common chronic illnesses and also includes one of the important tumour markers which is responsible for a cancerous growth common in elderly male age group.",
+            "price": 588,
+            "discounted": 300,
+            "url": "https://www.netmeds.com/images/cms/wysiwyg/health-packages/pathology/Netmeds-Health-Pack.png",
+            "color": "#F6FAE8"
+        }
+    ]
+}
