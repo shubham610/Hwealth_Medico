@@ -12,8 +12,8 @@ const Cart = () => {
     <>
       <Navbar />
       <div>
-        <div class="flex">
-          <div class="flex h-full w-2/3  bg-white shadow-xl">
+        <div class="flex flex-col md:flex-row">
+          <div class="flex h-full md:w-2/3  bg-white shadow-xl">
             <div class="flex-1 overflow-y-auto px-4 py-6 smx-6 nav-hidden">
               <div class="flex items-start justify-between">
                 <h1
@@ -74,7 +74,9 @@ const Cart = () => {
                                     <p class="ml-4">
                                       ₹
                                       {Math.round(
-                                        item.price.final_price.toFixed(2) * 50*cartContext.cartItems[item.id]
+                                        item.price.final_price.toFixed(2) *
+                                          50 *
+                                          cartContext.cartItems[item.id]
                                       )}
                                     </p>
                                   </div>
@@ -207,22 +209,34 @@ const Cart = () => {
               <div class="flex  border-b py-1 justify-between max-w-xs">
                 <p class="mt-6 text-base text-gray-600">Subtotal</p>
 
-                <p class="mt-6 text-base leading-5 text-gray-600">₹{cartContext.getTotalCartAmount()}</p>
+                <p class="mt-6 text-base leading-5 text-gray-600">
+                  ₹{cartContext.getTotalCartAmount()}
+                </p>
               </div>
               <div class="flex border-b py-1 justify-between max-w-xs">
                 <p class="mt-6 text-base text-gray-600">Shipping Estimate</p>
 
-                <p class="mt-6 text-base leading-5 text-gray-600">{cartContext.getTotalCartAmount()>0?"₹100":"N/A"}</p>
+                <p class="mt-6 text-base leading-5 text-gray-600">
+                  {cartContext.getTotalCartAmount() > 0 ? "₹100" : "N/A"}
+                </p>
               </div>
               <div class="flex border-b py-1 justify-between max-w-xs">
                 <p class="mt-6 text-base text-gray-600">Tax Estimate</p>
 
-                <p class="mt-6 text-base leading-5 text-gray-600">₹{cartContext.getTotalCartAmount()*5/100}</p>
+                <p class="mt-6 text-base leading-5 text-gray-600">
+                  ₹{(cartContext.getTotalCartAmount() * 5) / 100}
+                </p>
               </div>
               <div class="flex text-lg font-medium py-1 justify-between max-w-xs">
                 <p class="mt-6 text-gray-900">Order Total</p>
 
-                <p class="mt-6 leading-5 text-gray-900">{cartContext.getTotalCartAmount()>0?cartContext.getTotalCartAmount()*5/100+cartContext.getTotalCartAmount()+100:"N/A"}</p>
+                <p class="mt-6 leading-5 text-gray-900">
+                  {cartContext.getTotalCartAmount() > 0
+                    ? (cartContext.getTotalCartAmount() * 5) / 100 +
+                      cartContext.getTotalCartAmount() +
+                      100
+                    : "N/A"}
+                </p>
               </div>
               <div class="mt-6">
                 <a
