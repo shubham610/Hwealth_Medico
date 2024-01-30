@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { CartContext } from "./CartContext";
 
-const ProductDescription = ({ cart }) => {
+const ProductDescription = () => {
   const [incart, setincart] = useState(false);
   const { state } = useLocation();
   const cartContext = useContext(CartContext);

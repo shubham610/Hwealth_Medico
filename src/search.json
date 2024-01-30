@@ -1,0 +1,583 @@
+{
+    "status": "OK",
+    "message": "2000 results found",
+    "data": [
+        {
+            "product_id": 1,
+            "name": "Panadol Extra Strength",
+            "manufacturer": {
+                "name": "GlaxoSmithKline",
+                "url": "https://www.gsk.com/"
+            },
+            "form": "20 Tablets in 1 Bottle",
+            "product_url": "https://www.example.com/medicine/panadol-extra-strength-p1",
+            "image": "https://example.com/images/panadol.jpg",
+            "price": {
+                "mrp": 15.99,
+                "final_price": 12.99,
+                "discount_perc": 19
+            },
+            "in_stock": true
+        },
+        {
+            "product_id": 2,
+            "name": "Amoxicillin 500mg Capsules",
+            "manufacturer": {
+                "name": "Pfizer",
+                "url": "https://www.pfizer.com/"
+            },
+            "form": "30 Capsules in 1 Box",
+            "product_url": "https://www.example.com/medicine/amoxicillin-500mg-capsules-p2",
+            "image": "https://example.com/images/amoxicillin.jpg",
+            "price": {
+                "mrp": 25.49,
+                "final_price": 22.99,
+                "discount_perc": 10
+            },
+            "in_stock": false
+        },
+        {
+            "product_id": 3,
+            "name": "Aspirin 81mg Chewable Tablets",
+            "manufacturer": {
+                "name": "Bayer",
+                "url": "https://www.bayer.com/"
+            },
+            "form": "40 Tablets in 1 Bottle",
+            "product_url": "https://www.example.com/medicine/aspirin-81mg-chewable-tablets-p3",
+            "image": "https://example.com/images/aspirin.jpg",
+            "price": {
+                "mrp": 9.99,
+                "final_price": 8.49,
+                "discount_perc": 15
+            },
+            "in_stock": true
+        },
+        {
+            "product_id": 4,
+            "name": "Cetirizine 10mg Tablets",
+            "manufacturer": {
+                "name": "Johnson & Johnson",
+                "url": "https://www.jnj.com/"
+            },
+            "form": "25 Tablets in 1 Blister Pack",
+            "product_url": "https://www.example.com/medicine/cetirizine-10mg-tablets-p4",
+            "image": "https://example.com/images/cetirizine.jpg",
+            "price": {
+                "mrp": 13.99,
+                "final_price": 11.49,
+                "discount_perc": 18
+            },
+            "in_stock": true
+        },
+        {
+            "product_id": 5,
+            "name": "Ibuprofen 200mg Tablets",
+            "manufacturer": {
+                "name": "Novartis",
+                "url": "https://www.novartis.com/"
+            },
+            "form": "30 Tablets in 1 Box",
+            "product_url": "https://www.example.com/medicine/ibuprofen-200mg-tablets-p5",
+            "image": "https://example.com/images/ibuprofen.jpg",
+            "price": {
+                "mrp": 16.99,
+                "final_price": 14.49,
+                "discount_perc": 14
+            },
+            "in_stock": false
+        },
+        {
+            "product_id": 6,
+            "name": "Vitamin C 500mg Chewable Tablets",
+            "manufacturer": {
+                "name": "Nature's Best",
+                "url": "https://www.naturesbest.com/"
+            },
+            "form": "60 Tablets in 1 Bottle",
+            "product_url": "https://www.example.com/medicine/vitamin-c-500mg-chewable-tablets-p6",
+            "image": "https://example.com/images/vitamin-c.jpg",
+            "price": {
+                "mrp": 19.99,
+                "final_price": 17.49,
+                "discount_perc": 13
+            },
+            "in_stock": true
+        },
+        {
+            "product_id": 7,
+            "name": "Omeprazole 20mg Capsules",
+            "manufacturer": {
+                "name": "AstraZeneca",
+                "url": "https://www.astrazeneca.com/"
+            },
+            "form": "28 Capsules in 1 Box",
+            "product_url": "https://www.example.com/medicine/omeprazole-20mg-capsules-p7",
+            "image": "https://example.com/images/omeprazole.jpg",
+            "price": {
+                "mrp": 22.49,
+                "final_price": 19.99,
+                "discount_perc": 11
+            },
+            "in_stock": true
+        },
+        {
+            "product_id": 8,
+            "name": "Loratadine 10mg Tablets",
+            "manufacturer": {
+                "name": "Merck",
+                "url": "https://www.merck.com/"
+            },
+            "form": "20 Tablets in 1 Blister Pack",
+            "product_url": "https://www.example.com/medicine/loratadine-10mg-tablets-p8",
+            "image": "https://example.com/images/loratadine.jpg",
+            "price": {
+                "mrp": 14.99,
+                "final_price": 12.99,
+                "discount_perc": 13
+            },
+            "in_stock": false
+        },
+        {
+            "product_id": 9,
+            "name": "Simvastatin 40mg Tablets",
+            "manufacturer": {
+                "name": "Pfizer",
+                "url": "https://www.pfizer.com/"
+            },
+            "form": "30 Tablets in 1 Bottle",
+            "product_url": "https://www.example.com/medicine/simvastatin-40mg-tablets-p9",
+            "image": "https://example.com/images/simvastatin.jpg",
+            "price": {
+                "mrp": 27.99,
+                "final_price": 24.99,
+                "discount_perc": 11
+            },
+            "in_stock": true
+        },
+        {
+            "product_id": 10,
+            "name": "Metformin 500mg Tablets",
+            "manufacturer": {
+                "name": "Sanofi",
+                "url": "https://www.sanofi.com/"
+            },
+            "form": "60 Tablets in 1 Bottle",
+            "product_url": "https://www.example.com/medicine/metformin-500mg-tablets-p10",
+            "image": "https://example.com/images/metformin.jpg",
+            "price": {
+                "mrp": 17.99,
+                "final_price": 15.99,
+                "discount_perc": 11
+            },
+            "in_stock": true
+        },
+        {
+            "product_id": 11,
+            "name": "Ranitidine 150mg Tablets",
+            "manufacturer": {
+                "name": "GSK",
+                "url": "https://www.gsk.com/"
+            },
+            "form": "24 Tablets in 1 Box",
+            "product_url": "https://www.example.com/medicine/ranitidine-150mg-tablets-p11",
+            "image": "https://example.com/images/ranitidine.jpg",
+            "price": {
+                "mrp": 15.49,
+                "final_price": 12.99,
+                "discount_perc": 16
+            },
+            "in_stock": false
+        },
+        {
+            "product_id": 12,
+            "name": "Amlodipine 5mg Tablets",
+            "manufacturer": {
+                "name": "Novartis",
+                "url": "https://www.novartis.com/"
+            },
+            "form": "30 Tablets in 1 Bottle",
+            "product_url": "https://www.example.com/medicine/amlodipine-5mg-tablets-p12",
+            "image": "https://example.com/images/amlodipine.jpg",
+            "price": {
+                "mrp": 21.99,
+                "final_price": 19.49,
+                "discount_perc": 11
+            },
+            "in_stock": true
+        },
+        {
+            "product_id": 13,
+            "name": "Diazepam 10mg Tablets",
+            "manufacturer": {
+                "name": "Roche",
+                "url": "https://www.roche.com/"
+            },
+            "form": "20 Tablets in 1 Blister Pack",
+            "product_url": "https://www.example.com/medicine/diazepam-10mg-tablets-p13",
+            "image": "https://example.com/images/diazepam.jpg",
+            "price": {
+                "mrp": 18.99,
+                "final_price": 16.49,
+                "discount_perc": 13
+            },
+            "in_stock": true
+        },
+        {
+            "product_id": 14,
+            "name": "Levothyroxine 50mcg Tablets",
+            "manufacturer": {
+                "name": "AbbVie",
+                "url": "https://www.abbvie.com/"
+            },
+            "form": "90 Tablets in 1 Bottle",
+            "product_url": "https://www.example.com/medicine/levothyroxine-50mcg-tablets-p14",
+            "image": "https://example.com/images/levothyroxine.jpg",
+            "price": {
+                "mrp": 15.99,
+                "final_price": 13.99,
+                "discount_perc": 12
+            },
+            "in_stock": false
+        },
+        {
+            "product_id": 15,
+            "name": "Losartan 50mg Tablets",
+            "manufacturer": {
+                "name": "Takeda",
+                "url": "https://www.takeda.com/"
+            },
+            "form": "28 Tablets in 1 Box",
+            "product_url": "https://www.example.com/medicine/losartan-50mg-tablets-p15",
+            "image": "https://example.com/images/losartan.jpg",
+            "price": {
+                "mrp": 23.49,
+                "final_price": 20.99,
+                "discount_perc": 10
+            },
+            "in_stock": true
+        },
+        {
+            "product_id": 16,
+            "name": "Warfarin 5mg Tablets",
+            "manufacturer": {
+                "name": "Bristol Myers Squibb",
+                "url": "https://www.bms.com/"
+            },
+            "form": "30 Tablets in 1 Bottle",
+            "product_url": "https://www.example.com/medicine/warfarin-5mg-tablets-p16",
+            "image": "https://example.com/images/warfarin.jpg",
+            "price": {
+                "mrp": 19.99,
+                "final_price": 17.99,
+                "discount_perc": 10
+            },
+            "in_stock": true
+        },
+        {
+            "product_id": 17,
+            "name": "Methotrexate 2.5mg Tablets",
+            "manufacturer": {
+                "name": "Eli Lilly",
+                "url": "https://www.lilly.com/"
+            },
+            "form": "50 Tablets in 1 Bottle",
+            "product_url": "https://www.example.com/medicine/methotrexate-2.5mg-tablets-p17",
+            "image": "https://example.com/images/methotrexate.jpg",
+            "price": {
+                "mrp": 25.99,
+                "final_price": 22.99,
+                "discount_perc": 12
+            },
+            "in_stock": false
+        }, {
+            "product_id": 145720,
+            "name": "Lisinopril 10mg Tablets",
+            "manufacturer": {
+                "name": "Merck",
+                "url": "https://www.merck.com/"
+            },
+            "form": "30 Tablets in 1 Bottle",
+            "product_url": "https://www.example.com/medicine/lisinopril-10mg-tablets-p145720",
+            "image": "https://example.com/images/lisinopril.jpg",
+            "price": {
+                "mrp": 15,
+                "final_price": 12,
+                "discount_perc": 20
+            },
+            "in_stock": true
+        },
+        {
+            "product_id": 234728,
+            "name": "Metformin 500mg Tablets",
+            "manufacturer": {
+                "name": "AstraZeneca",
+                "url": "https://www.astrazeneca.com/"
+            },
+            "form": "20 Tablets in 1 Strip",
+            "product_url": "https://www.example.com/medicine/metformin-500mg-tablets-p234728",
+            "image": "https://example.com/images/metformin.jpg",
+            "price": {
+                "mrp": 20,
+                "final_price": 18,
+                "discount_perc": 10
+            },
+            "in_stock": true
+        },
+        {
+            "product_id": 234092,
+            "name": "Levothyroxine 50mcg Tablets",
+            "manufacturer": {
+                "name": "Abbott",
+                "url": "https://www.abbott.com/"
+            },
+            "form": "10 Tablets in 1 Blister Pack",
+            "product_url": "https://www.example.com/medicine/levothyroxine-50mcg-tablets-p234092",
+            "image": "https://example.com/images/levothyroxine.jpg",
+            "price": {
+                "mrp": 25,
+                "final_price": 22,
+                "discount_perc": 12
+            },
+            "in_stock": false
+        },
+        {
+            "product_id": 987654,
+            "name": "Omeprazole 20mg Capsules",
+            "manufacturer": {
+                "name": "Pfizer",
+                "url": "https://www.pfizer.com/"
+            },
+            "form": "24 Capsules in 1 Box",
+            "product_url": "https://www.example.com/medicine/omeprazole-20mg-capsules-p987654",
+            "image": "https://example.com/images/omeprazole.jpg",
+            "price": {
+                "mrp": 18,
+                "final_price": 15,
+                "discount_perc": 17
+            },
+            "in_stock": true
+        },
+        {
+            "product_id": 876543,
+            "name": "Atorvastatin 40mg Tablets",
+            "manufacturer": {
+                "name": "Novartis",
+                "url": "https://www.novartis.com/"
+            },
+            "form": "15 Tablets in 1 Blister Pack",
+            "product_url": "https://www.example.com/medicine/atorvastatin-40mg-tablets-p876543",
+            "image": "https://example.com/images/atorvastatin.jpg",
+            "price": {
+                "mrp": 22,
+                "final_price": 20,
+                "discount_perc": 10
+            },
+            "in_stock": false
+        },
+        {
+            "product_id": 111222,
+            "name": "Sertraline 50mg Tablets",
+            "manufacturer": {
+                "name": "GlaxoSmithKline",
+                "url": "https://www.gsk.com/"
+            },
+            "form": "30 Tablets in 1 Bottle",
+            "product_url": "https://www.example.com/medicine/sertraline-50mg-tablets-p111222",
+            "image": "https://example.com/images/sertraline.jpg",
+            "price": {
+                "mrp": 15,
+                "final_price": 13,
+                "discount_perc": 13
+            },
+            "in_stock": true
+        },
+        {
+            "product_id": 333444,
+            "name": "Hydrochlorothiazide 25mg Tablets",
+            "manufacturer": {
+                "name": "Sanofi",
+                "url": "https://www.sanofi.com/"
+            },
+            "form": "20 Tablets in 1 Strip",
+            "product_url": "https://www.example.com/medicine/hydrochlorothiazide-25mg-tablets-p333444",
+            "image": "https://example.com/images/hydrochlorothiazide.jpg",
+            "price": {
+                "mrp": 18,
+                "final_price": 16,
+                "discount_perc": 11
+            },
+            "in_stock": true
+        },
+        {
+            "product_id": 555666,
+            "name": "Amlodipine 5mg Tablets",
+            "manufacturer": {
+                "name": "Roche",
+                "url": "https://www.roche.com/"
+            },
+            "form": "30 Tablets in 1 Bottle",
+            "product_url": "https://www.example.com/medicine/amlodipine-5mg-tablets-p555666",
+            "image": "https://example.com/images/amlodipine.jpg",
+            "price": {
+                "mrp": 20,
+                "final_price": 18,
+                "discount_perc": 10
+            },
+            "in_stock": false
+        },
+        {
+            "product_id": 777888,
+            "name": "Warfarin 5mg Tablets",
+            "manufacturer": {
+                "name": "Bristol Myers Squibb",
+                "url": "https://www.bms.com/"
+            },
+            "form": "10 Tablets in 1 Blister Pack",
+            "product_url": "https://www.example.com/medicine/warfarin-5mg-tablets-p777888",
+            "image": "https://example.com/images/warfarin.jpg",
+            "price": {
+                "mrp": 25,
+                "final_price": 22,
+                "discount_perc": 12
+            },
+            "in_stock": false
+        },
+        {
+            "product_id": 999000,
+            "name": "Diazepam 10mg Tablets",
+            "manufacturer": {
+                "name": "Mylan",
+                "url": "https://www.mylan.com/"
+            },
+            "form": "20 Tablets in 1 Strip",
+            "product_url": "https://www.example.com/medicine/diazepam-10mg-tablets-p999000",
+            "image": "https://example.com/images/diazepam.jpg",
+            "price": {
+                "mrp": 15,
+                "final_price": 13,
+                "discount_perc": 13
+            },
+            "in_stock": true
+        },
+        {
+            "product_id": 112233,
+            "name": "Ciprofloxacin 500mg Tablets",
+            "manufacturer": {
+                "name": "Cipla",
+                "url": "https://www.cipla.com/"
+            },
+            "form": "30 Tablets in 1 Bottle",
+            "product_url": "https://www.example.com/medicine/ciprofloxacin-500mg-tablets-p112233",
+            "image": "https://example.com/images/ciprofloxacin.jpg",
+            "price": {
+                "mrp": 20,
+                "final_price": 18,
+                "discount_perc": 10
+            },
+            "in_stock": true
+        },
+        {
+            "product_id": 445566,
+            "name": "Alprazolam 0.5mg Tablets",
+            "manufacturer": {
+                "name": "Sun Pharma",
+                "url": "https://www.sunpharma.com/"
+            },
+            "form": "20 Tablets in 1 Blister Pack",
+            "product_url": "https://www.example.com/medicine/alprazolam-0.5mg-tablets-p445566",
+            "image": "https://example.com/images/alprazolam.jpg",
+            "price": {
+                "mrp": 18,
+                "final_price": 16,
+                "discount_perc": 11
+            },
+            "in_stock": false
+        },
+        {
+            "product_id": 778899,
+            "name": "Simvastatin 20mg Tablets",
+            "manufacturer": {
+                "name": "Teva",
+                "url": "https://www.teva.com/"
+            },
+            "form": "30 Tablets in 1 Bottle",
+            "product_url": "https://www.example.com/medicine/simvastatin-20mg-tablets-p778899",
+            "image": "https://example.com/images/simvastatin.jpg",
+            "price": {
+                "mrp": 22,
+                "final_price": 20,
+                "discount_perc": 10
+            },
+            "in_stock": true
+        },
+        {
+            "product_id": 112233,
+            "name": "Montelukast 10mg Tablets",
+            "manufacturer": {
+                "name": "Glenmark",
+                "url": "https://www.glenmarkpharma.com/"
+            },
+            "form": "20 Tablets in 1 Blister Pack",
+            "product_url": "https://www.example.com/medicine/montelukast-10mg-tablets-p112233",
+            "image": "https://example.com/images/montelukast.jpg",
+            "price": {
+                "mrp": 20,
+                "final_price": 18,
+                "discount_perc": 10
+            },
+            "in_stock": false
+        },
+        {
+            "product_id": 445566,
+            "name": "Fluoxetine 20mg Capsules",
+            "manufacturer": {
+                "name": "Dr. Reddy's",
+                "url": "https://www.drreddys.com/"
+            },
+            "form": "30 Capsules in 1 Bottle",
+            "product_url": "https://www.example.com/medicine/fluoxetine-20mg-capsules-p445566",
+            "image": "https://example.com/images/fluoxetine.jpg",
+            "price": {
+                "mrp": 18,
+                "final_price": 16,
+                "discount_perc": 11
+            },
+            "in_stock": true
+        },
+        {
+            "product_id": 778899,
+            "name": "Hydroxyzine 25mg Tablets",
+            "manufacturer": {
+                "name": "Torrent Pharma",
+                "url": "https://www.torrentpharma.com/"
+            },
+            "form": "20 Tablets in 1 Strip",
+            "product_url": "https://www.example.com/medicine/hydroxyzine-25mg-tablets-p778899",
+            "image": "https://example.com/images/hydroxyzine.jpg",
+            "price": {
+                "mrp": 22,
+                "final_price": 20,
+                "discount_perc": 10
+            },
+            "in_stock": true
+        },
+        {
+            "product_id": 112233,
+            "name": "Doxycycline 100mg Capsules",
+            "manufacturer": {
+                "name": "Mankind Pharma",
+                "url": "https://www.mankindpharma.com/"
+            },
+            "form": "30 Capsules in 1 Bottle",
+            "product_url": "https://www.example.com/medicine/doxycycline-100mg-capsules-p112233",
+            "image": "https://example.com/images/doxycycline.jpg",
+            "price": {
+                "mrp": 20,
+                "final_price": 18,
+                "discount_perc": 10
+            },
+            "in_stock": false
+        }
+    ]
+    }
