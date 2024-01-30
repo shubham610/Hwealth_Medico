@@ -13,6 +13,7 @@ import Labtest from "./Labtest";
 import Contact from "./Contact";
 import Login from "./Login";
 import Signup from "./Signup";
+import AboutUs from "./Aboutus";
 
 const App = () => {
   const [cart, setCart] = useState() 
@@ -48,6 +49,7 @@ if (!data) {
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/about" element={<AboutUs />} />
       </Routes>
       </ScrollToTop>
       </CartContextProvider>
