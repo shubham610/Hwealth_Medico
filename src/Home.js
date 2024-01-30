@@ -1,19 +1,17 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import ProductCard from "./ProductCard";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Seach from "./Seach";
+import { CartContext } from "./CartContext";
 
-const Home = ({ cart, setCart }) => {
+const Home = () => {
   const [data, setdata] = useState("");
+  const cartContext = useContext(CartContext);
 
   useEffect(() => {
-    const fetchData = async () => {
-      const data = await axios.get("http://localhost:3030/data");
-      setdata(data.data);
-    };
-    fetchData();
+    setdata(cartContext.medicines);
   }, []);
 
   if (!data) {
@@ -24,7 +22,7 @@ const Home = ({ cart, setCart }) => {
   return (
     <>
       <Navbar />
-      <Seach />
+      <Seach data={data} />
 
       <div className="flex flex-wrap gap-6 justify-evenly">
         {data.map((e, i) => {
@@ -32,8 +30,6 @@ const Home = ({ cart, setCart }) => {
             <ProductCard
               data={e}
               key={i}
-              cart={cart}
-              setCart={setCart}
               src="https://t4.ftcdn.net/jpg/02/81/42/77/360_F_281427785_gfahY8bX4VYCGo6jlfO8St38wS9cJQop.jpg"
             />
           );
