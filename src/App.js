@@ -10,6 +10,9 @@ import ScrollToTop from "./ScrollToTop";
 import Cart from "./Cart";
 import { CartContextProvider } from "./CartContext";
 import Labtest from "./Labtest";
+import Contact from "./Contact";
+import Login from "./Login";
+import Signup from "./Signup";
 
 const App = () => {
   const [cart, setCart] = useState() 
@@ -42,6 +45,9 @@ if (!data) {
         <Route path="" element={<Home />} />
         <Route path="/product" element={<ProductDescription />} />
         <Route path="/labtest" element={<Labtest />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
       </Routes>
       </ScrollToTop>
       </CartContextProvider>

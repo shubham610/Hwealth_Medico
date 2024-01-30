@@ -104,7 +104,7 @@ const Form = () => {
          <div className="sm:col-span-full content-center">
          <label htmlFor="accept">
            <input type="checkbox" name="" id="accept" />
-          <strong> I agree to Netmeds Terms and Conditions.</strong>
+          <strong> I agree to Hmedico Terms and Conditions.</strong>
            </label>
          </div>
             </div>
