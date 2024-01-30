@@ -7,7 +7,6 @@ import Footer from './Footer'
 import Card from './Card'
 import cardval from "./Card.json"
 const Labtest = () => {
-    console.log("Hemant is",cardval)
     return (
 
        <> 

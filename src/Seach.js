@@ -4,7 +4,6 @@ import Fuse from "fuse.js";
 import Searchresult from "./Searchresult";
 const Seach = ({ data }) => {
   const full = data;
-  console.log("Shubham" + full);
 
   const [queryText, setQueryText] = useState("");
   const [searchResults, setSearchResults] = useState([]);
@@ -24,7 +23,6 @@ const Seach = ({ data }) => {
     const result = fuse.search(queryText, { limit: 5 });
 
     setSearchResults(result);
-    console.log("Search result", result);
   }, [queryText]);
 
   return (

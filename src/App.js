@@ -29,7 +29,6 @@ useEffect(() => {
 }, []);
 
 if (!data) {
-  console.log("Loading");
   return <div>Loading ....</div>;
 }
 
