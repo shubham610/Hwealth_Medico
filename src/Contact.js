@@ -8,7 +8,7 @@ const Contact = () => {
   return (
   <>
   <Navbar/>
-    <div class="isolate smy-32 lgx-8">
+    <div class="isolate smy-32 lgx-8 p-4">
     <img class="mx-auto mt-6" src="https://cdni.iconscout.com/illustration/premium/thumb/customer-service-center-3483612-2912013.png" alt="Help Desk" />
 
     <div class="mx-auto mt-6 max-w-2xl text-center">

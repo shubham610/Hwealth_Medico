@@ -1,8 +1,7 @@
-import React, { useContext, useEffect, useState } from "react";
-import data from "../src/search.json";
+import React, { useEffect, useState } from "react";
 import Fuse from "fuse.js";
 import Searchresult from "./Searchresult";
-const Seach = ({ data }) => {
+const Search = ({ data }) => {
   const full = data;
 
   const [queryText, setQueryText] = useState("");
@@ -69,4 +68,4 @@ const Seach = ({ data }) => {
   );
 };
 
-export default Seach;
+export default Search;

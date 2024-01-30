@@ -3,7 +3,7 @@ import { useContext, useEffect, useState } from "react";
 import ProductCard from "./ProductCard";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import Seach from "./Seach";
+import Search from "./Search";
 import { CartContext } from "./CartContext";
 
 const Home = () => {
@@ -21,7 +21,7 @@ const Home = () => {
   return (
     <>
       <Navbar />
-      <Seach data={data} />
+      <Search data={data} />
 
       <div className="flex flex-wrap gap-6 justify-evenly">
         {data.map((e, i) => {
