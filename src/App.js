@@ -22,7 +22,7 @@ const App = () => {
 
 useEffect(() => {
   const fetchData = async () => {
-    const data = await axios.get("http://localhost:3030/data");
+    const data = await axios.get("http://localhost:8080/products/all");
     setdata(data.data);
   };
   fetchData();
@@ -32,7 +32,7 @@ if (!data) {
   return <div>Loading ....</div>;
 }
 
-
+console.log(data);
 
   return (
     <BrowserRouter>

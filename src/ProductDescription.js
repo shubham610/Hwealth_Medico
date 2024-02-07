@@ -78,7 +78,7 @@ const ProductDescription = () => {
                 rel="noopener noreferrer"
                 className="text-cyan-500 hover:underline"
               >
-                {manufacturer.name}
+                {manufacturer.manufacturerName}
               </a>
             </p>
 
