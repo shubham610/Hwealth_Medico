@@ -1,7 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Login.css'
 import { Link } from 'react-router-dom'
 const Login = () => {
+
+    const [userName, setUserName] = useState('');
+    const [userPassword, setUserPassword] = useState('');
+    let formData={
+        userName:userName,
+        userPassword:userPassword,
+    }
+
+    const handleSubmit=(e)=>{
+        e.preventDefault();
+        console.log(formData);
+    }
+
   return (
     <>
     <div class="flex min-h-full flex-col justify-center px-6 py-12 lgx-8" >
@@ -13,11 +26,11 @@ const Login = () => {
     </div>
 
     <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-        <form class="space-y-6" action="#" method="POST">
+        <form class="space-y-6" onSubmit={(e)=>handleSubmit(e)} >
             <div>
-                <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Phone number</label>
+                <label for="userName" class="block text-sm font-medium leading-6 text-gray-900">UserName</label>
                 <div class="mt-2">
-                    <input id="email" name="email" type="email" autocomplete="email" required
+                    <input id="userName" name="userName" type="text" required onChange={(e)=>setUserName(e.target.value)}
                         class="block w-full pl-4 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-cyan-600 sm:text-sm sm:leading-6">
                             </input>
                 </div>
@@ -31,7 +44,7 @@ const Login = () => {
                     </div> --> */}
                 </div>
                 <div class="mt-2">
-                    <input id="password" name="password" type="password" autocomplete="current-password" required
+                    <input id="password" name="password" type="password" onChange={(e)=>setUserPassword(e.target.value)} required
                         class="block w-full pl-4 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-cyan-600 sm:text-sm sm:leading-6">
                             </input>
                 </div>

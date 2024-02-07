@@ -1,7 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 const Signup = () => {
+
+    const [userName, setUserName] = useState('');
+    const [userPassword, setUserPassword] = useState('');
+    const [userPhoneNo, setUserPhoneNo] = useState('');
+    let formData={
+        userName:userName,
+        userPassword:userPassword,
+        userPhoneNo:userPhoneNo
+    }
+
+    const handleSubmit=(e)=>{
+        e.preventDefault();
+        console.log(formData);
+    }
+
   return (
     <>
     
@@ -14,21 +29,25 @@ const Signup = () => {
     </div>
 
     <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-        <form class="space-y-6" action="#" method="POST">
+        <form class="space-y-6" onSubmit={(e)=>handleSubmit(e)}>
             <div>
-                <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Name</label>
+                <label for="userName" class="block text-sm font-medium leading-6 text-gray-900">UserName</label>
                 <div class="mt-2">
-                    <input id="email" name="email" type="email" autocomplete="email" required
+                    <input id="userName" name="userName" type="text" required onChange={(e)=>{
+                        setUserName(e.target.value)
+                    }}
                         class="block pl-4 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-cyan-600 sm:text-sm sm:leading-6">
-                        </input>
+                            </input>
                 </div>
             </div>
             <div>
-                <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Phone number</label>
+                <label for="userPhoneNo" class="block text-sm font-medium leading-6 text-gray-900">Phone Number</label>
                 <div class="mt-2">
-                    <input id="email" name="email" type="email" autocomplete="email" required
+                    <input id="userPhoneNo" onChange={(e)=>{
+                        setUserPhoneNo(e.target.value)
+                    }} name="userPhoneNo" type="number"  required
                         class="block pl-4 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-cyan-600 sm:text-sm sm:leading-6">
-                            </input>
+                        </input>
                 </div>
             </div>
 
@@ -40,16 +59,18 @@ const Signup = () => {
                     </div> --> */}
                 </div>
                 <div class="mt-2">
-                    <input id="password" name="password" type="password" autocomplete="current-password" required
+                    <input id="password" name="password" type="password" onChange={(e)=>{
+                        setUserPassword(e.target.value)
+                    }} required
                         class="block pl-4 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-cyan-600 sm:text-sm sm:leading-6">
                             </input>
                 </div>
             </div>
 
             <div>
-                <button type="submit"
+                <button type='submit'
                     class="flex w-full justify-center rounded-md bg-cyan-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-cyan-500 focus-visible￼utline focus-visible￼utline-2 focus-visible￼utline-offset-2 focus-visible￼utline-cyan-600" >Sign
-                    in</button>
+                    up</button>
             </div>
         </form>
 
