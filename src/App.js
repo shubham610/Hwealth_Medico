@@ -16,41 +16,55 @@ import Signup from "./Signup";
 import AboutUs from "./Aboutus";
 
 const App = () => {
-  const [cart, setCart] = useState() 
+  const [cart, setCart] = useState();
 
   const [data, setdata] = useState("");
 
-useEffect(() => {
-  const fetchData = async () => {
-    const data = await axios.get("http://localhost:8080/products/all");
-    setdata(data.data);
-  };
-  fetchData();
-}, []);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await axios.get("http://localhost:8080/products/all");
+        setdata(data.data);
+      } catch (error) {
+        if (error.response.data == "Product list is empty") {
+          setdata([]);
+        }
+      }
+    };
+    fetchData();
+  }, []);
 
-if (!data) {
-  return <div>Loading ....</div>;
-}
+  if (!data) {
+    return <div>Loading ....</div>;
+  }
+  if (data && data.length == 0) {
+    return <div>No Products to display......</div>;
+  }
 
-console.log(data);
 
   return (
     <BrowserRouter>
-    <CartContextProvider data={data}>
-    <ScrollToTop>
-      <Routes>
-        <Route path="" element={<Home cart={cart} setCart={setCart}/>} />
-        <Route path="/product" element={<ProductDescription cart={cart} setCart={setCart}/>} />
-        <Route path="/cart" element={<Cart cart={cart} setCart={setCart}/>} />
-        <Route path="" element={<Home />} />
-        <Route path="/product" element={<ProductDescription />} />
-        <Route path="/labtest" element={<Labtest />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/about" element={<AboutUs />} />
-      </Routes>
-      </ScrollToTop>
+      <CartContextProvider data={data}>
+        <ScrollToTop>
+          <Routes>
+            <Route path="" element={<Home cart={cart} setCart={setCart} />} />
+            <Route
+              path="/product"
+              element={<ProductDescription cart={cart} setCart={setCart} />}
+            />
+            <Route
+              path="/cart"
+              element={<Cart cart={cart} setCart={setCart} />}
+            />
+            <Route path="" element={<Home />} />
+            <Route path="/product" element={<ProductDescription />} />
+            <Route path="/labtest" element={<Labtest />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/about" element={<AboutUs />} />
+          </Routes>
+        </ScrollToTop>
       </CartContextProvider>
     </BrowserRouter>
   );

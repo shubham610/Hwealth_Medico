@@ -13,18 +13,16 @@ const getDefaultCart = (data) => {
 
 export const CartContextProvider = (props) => {
   const medicines = props.data;
-  console.log(medicines);
 
   const [cartItems, setCartItems] = useState(getDefaultCart(props.data));
+  const [user, setUser] = useState();
 
   const getTotalCartAmount = () => {
     let totalAmount = 0;
 
     for (const item in cartItems) {
       if (cartItems[item] > 0) {
-        console.log(cartItems[item]);
         let itemInfo = medicines.find((product) => product.id == item);
-        console.log(itemInfo);
         totalAmount += Math.round(
           cartItems[item] * itemInfo.price.final_price.toFixed(2) * 50
         );
@@ -50,10 +48,16 @@ export const CartContextProvider = (props) => {
     setCartItems(getDefaultCart());
   };
 
+  const setLoggedInUser = (user) => {
+    setUser(user);
+  };
+
   const contextValue = {
     medicines,
 
     cartItems,
+    user,
+    setLoggedInUser,
 
     addToCart,
 
