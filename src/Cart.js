@@ -52,6 +52,16 @@ const Cart = () => {
     }
   }
 
+  const reset=()=>{
+    setfullAddress("")
+setcity("")
+setstate("")
+setcountry("")
+setphoneno(0)
+setpinCode(0)
+setShowCart(true)
+  }
+
   const placeOrder=()=>{
     if(!order.user){
       navigate("/login");
@@ -390,7 +400,7 @@ const Cart = () => {
         </div>
       </div>
       <div class="mt-6 sm:col-span-2 flex items-center gap-x-6">
-  <button onClick={()=>setShowCart&&setShowCart(false)} class="text-sm font-semibold leading-6 text-gray-900">Cancel</button>
+  <button onClick={reset} class="text-sm font-semibold leading-6 text-gray-900">Cancel</button>
   <button  onClick={proceed} class="w-fit rounded-md bg-cyan-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-cyan-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-600">Submit</button>
 </div>
     </div>
