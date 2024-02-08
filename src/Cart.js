@@ -3,10 +3,50 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import "./cart.css";
 import { CartContext } from "./CartContext";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
   const [cartEmpty, setCartEmpty] = useState(true);
+  const navigate=useNavigate();
   const cartContext = useContext(CartContext);
+  const address={
+    address:"",
+    city:"",
+    state:"",
+    country:"",
+    phoneno:0,
+    pinCode:0
+  }
+
+  const order={
+    amount:0,
+    user:cartContext?.user,
+    address:address,
+    orderedProducts:[]
+  }
+
+  const placeOrder=()=>{
+    if(!order.user){
+      navigate("/login");
+    }
+    order.amount=cartContext.getTotalCartAmount() > 0
+    ? (cartContext.getTotalCartAmount() * 5) / 100 +
+      cartContext.getTotalCartAmount() +
+      100
+    : 0;
+    if(order.amount<=0){
+      navigate("/");
+    }
+    for (const item in cartContext.cartItems) {
+      if(cartContext.cartItems[item]>0)
+      order.orderedProducts.push({productId:item,quantity:cartContext.cartItems[item]});
+    }
+    console.log(order);
+  }
+
+
+
+
 
   return (
     <>
@@ -239,12 +279,12 @@ const Cart = () => {
                 </p>
               </div>
               <div class="mt-6">
-                <a
-                  href="#"
+                <button
+                  onClick={placeOrder}
                   class="flex items-center justify-center rounded-md border border-transparent bg-cyan-700 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-cyan-800"
                 >
                   Proceed
-                </a>
+                </button>
               </div>
             </div>
           </div>

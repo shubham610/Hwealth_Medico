@@ -21,7 +21,7 @@ export const CartContextProvider = (props) => {
     let totalAmount = 0;
 
     for (const item in cartItems) {
-      if (cartItems[item] > 0) {
+      if (cartItems[item] > 0) { 
         let itemInfo = medicines.find((product) => product.id == item);
         totalAmount += Math.round(
           cartItems[item] * itemInfo.price.final_price.toFixed(2) * 50
