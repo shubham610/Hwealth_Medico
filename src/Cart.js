@@ -4,9 +4,11 @@ import Footer from "./Footer";
 import "./cart.css";
 import { CartContext } from "./CartContext";
 import { useNavigate } from "react-router-dom";
+import Address from "./Address";
 
 const Cart = () => {
   const [cartEmpty, setCartEmpty] = useState(true);
+  const [showCart, setShowCart] = useState(false);
   const navigate=useNavigate();
   const cartContext = useContext(CartContext);
   const address={
@@ -51,7 +53,7 @@ const Cart = () => {
   return (
     <>
       <Navbar />
-      <div>
+{showCart&&      <div>
         <div class="flex flex-col md:flex-row">
           <div class="flex h-full md:w-2/3  bg-white shadow-xl">
             <div class="flex-1 overflow-y-auto px-4 py-6 smx-6 nav-hidden">
@@ -289,7 +291,13 @@ const Cart = () => {
             </div>
           </div>
         </div>
+      </div>}
+      
+
+      <div className="w-[75%] m-auto">
+        <Address></Address>
       </div>
+
       <Footer />
     </>
   );

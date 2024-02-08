@@ -26,9 +26,7 @@ const App = () => {
         const data = await axios.get("http://localhost:8080/products/all");
         setdata(data.data);
       } catch (error) {
-        if (error.response.data == "Product list is empty") {
           setdata([]);
-        }
       }
     };
     fetchData();
