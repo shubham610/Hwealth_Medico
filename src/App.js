@@ -14,6 +14,14 @@ import Contact from "./Contact";
 import Login from "./Login";
 import Signup from "./Signup";
 import AboutUs from "./Aboutus";
+import Payment from "./Payment";
+import { Elements } from "@stripe/react-stripe-js";
+import { loadStripe } from "@stripe/stripe-js";
+import Success from "./Success";
+
+const stripePromise = loadStripe(
+  "pk_test_51NTUMQSCuUXEi5M2IorbEXUsbJEizJLoSr3CK0R10mXnrgZXDwQPj39az845kW2gee5KEGOGC6BamMbUjkf864IK00xsbPEhm2"
+);
 
 const App = () => {
   const [cart, setCart] = useState();
@@ -26,7 +34,7 @@ const App = () => {
         const data = await axios.get("http://localhost:8080/products/all");
         setdata(data.data);
       } catch (error) {
-          setdata([]);
+        setdata([]);
       }
     };
     fetchData();
@@ -38,7 +46,6 @@ const App = () => {
   if (data && data.length == 0) {
     return <div>No Products to display......</div>;
   }
-
 
   return (
     <BrowserRouter>
@@ -61,6 +68,15 @@ const App = () => {
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/about" element={<AboutUs />} />
+            <Route path="/success" element={<Success />} />
+            <Route
+              path="/pay"
+              element={
+                <Elements stripe={stripePromise}>
+                  <Payment />
+                </Elements>
+              }
+            />
           </Routes>
         </ScrollToTop>
       </CartContextProvider>
