@@ -35,6 +35,7 @@ const App = () => {
         const data = await axios.get("http://localhost:8080/products/all");
         setdata(data.data);
       } catch (error) {
+        
         setdata([]);
       }
     };

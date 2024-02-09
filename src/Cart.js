@@ -80,7 +80,6 @@ const Cart = () => {
         });
     }
     setShowCart(false);
-    console.log(order);
   };
 
   return (
@@ -149,11 +148,11 @@ const Cart = () => {
                                       </h3>
                                       <p class="ml-4">
                                         ₹
-                                        {Math.round(
-                                          item.price.final_price.toFixed(2) *
-                                            50 *
-                                            cartContext.cartItems[item.id]
-                                        )}
+                                        {(
+                                          item.price.final_price *
+                                          50 *
+                                          cartContext.cartItems[item.id]
+                                        ).toFixed(2)}
                                       </p>
                                     </div>
                                     <p class="mt-1 text-sm text-gray-500">
@@ -300,7 +299,7 @@ const Cart = () => {
                   <p class="mt-6 text-base text-gray-600">Tax Estimate</p>
 
                   <p class="mt-6 text-base leading-5 text-gray-600">
-                    ₹{(cartContext.getTotalCartAmount() * 5) / 100}
+                    ₹{(cartContext.getTotalCartAmount() * 0.05).toFixed(2)}
                   </p>
                 </div>
                 <div class="flex text-lg font-medium py-1 justify-between max-w-xs">
@@ -308,9 +307,11 @@ const Cart = () => {
 
                   <p class="mt-6 leading-5 text-gray-900">
                     {cartContext.getTotalCartAmount() > 0
-                      ? (cartContext.getTotalCartAmount() * 5) / 100 +
-                        cartContext.getTotalCartAmount() +
-                        100
+                      ? (
+                          cartContext.getTotalCartAmount() * 0.05 +
+                          cartContext.getTotalCartAmount() +
+                          100
+                        ).toFixed(2)
                       : "N/A"}
                   </p>
                 </div>

@@ -85,10 +85,9 @@ const ProductDescription = () => {
             <p className="text-lg text-gray-700 mb-2">{form}</p>
             <p className="text-2xl text-gray-700 mb-4">
               <span className="line-through text-gray-500">
-                ₹{Math.round(price.mrp.toFixed(2) * 50)}
+                ₹{(price.mrp * 50).toFixed(2)}
               </span>
-              ₹{Math.round(price.final_price.toFixed(2) * 50)} (
-              {price.discount_perc}% off)
+              ₹{(price.final_price * 50).toFixed(2)} ({price.discount_perc}% off)
             </p>
 
             <p

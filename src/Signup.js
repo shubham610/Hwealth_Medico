@@ -8,6 +8,7 @@ const Signup = () => {
   const [userName, setUserName] = useState("");
   const [userPassword, setUserPassword] = useState("");
   const [userPhoneNo, setUserPhoneNo] = useState("");
+  const [error, seterror] = useState("");
   const cartContext = useContext(CartContext);
   const salt = "$2a$10$vI8aWBnW3fIDaWBnW3nW32";
   const navigate = useNavigate();
@@ -42,7 +43,7 @@ const Signup = () => {
       sessionStorage.setItem("user", JSON.stringify(user.data));
       navigate("/");
     } catch (error) {
-      console.log(error);
+      seterror(error.response.data);
     }
   };
 
@@ -59,7 +60,9 @@ const Signup = () => {
             Sign up to your account
           </h2>
         </div>
-
+        <span class="mx-auto text-red-700 mt-4 font-semibold text-lg">
+          {error}
+        </span>
         <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
           <form class="space-y-6" onSubmit={(e) => handleSubmit(e)}>
             <div>

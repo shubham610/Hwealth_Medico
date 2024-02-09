@@ -2,20 +2,18 @@ import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "./CartContext";
 
-const ProductCard = ({ data, src}) => {
+const ProductCard = ({ data, src }) => {
+  const cartContext = useContext(CartContext);
 
-  const cartContext=useContext(CartContext);
-
-
-  const [incart, setincart] = useState(false)
-  const [disabled, setdisabled] = useState(false)
-  if(!data.in_stock&&!disabled){
-    setdisabled(true)
+  const [incart, setincart] = useState(false);
+  const [disabled, setdisabled] = useState(false);
+  if (!data.in_stock && !disabled) {
+    setdisabled(true);
   }
-  if(cartContext.cartItems[data.id]>0&&!disabled&&!incart){
-    setdisabled(true)
-    setincart(true)
-    return
+  if (cartContext.cartItems[data.id] > 0 && !disabled && !incart) {
+    setdisabled(true);
+    setincart(true);
+    return;
   }
 
   return (
@@ -83,25 +81,29 @@ const ProductCard = ({ data, src}) => {
         </div>
         <div class="flex items-center justify-between">
           <span class="text-3xl font-bold text-gray-900 dark:text-white">
-            Rs.{Math.round(data.price.final_price * 50)}
+            Rs.{(data.price.final_price * 50).toFixed(2)}
           </span>
-        {!incart&&<button
-        disabled={disabled}
-        onClick={()=>{
-          cartContext.addToCart(data.id);
-          setdisabled(true)
-          setincart(true)
-        }}
-          class="disabled:opacity-50 disabled:bg-gray-900 text-white bg-cyan-700 hover:bg-cyan-800 focus:ring-4 focus:outline-none focus:ring-cyan-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800"
-        >
-          {data.in_stock?"Add to cart":"Out of Stock"}
-        </button>}
-        {incart&&<button
-        disabled={disabled}
-          class="disabled:opacity-50 text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800"
-        >
-          Added to cart
-        </button>}
+          {!incart && (
+            <button
+              disabled={disabled}
+              onClick={() => {
+                cartContext.addToCart(data.id);
+                setdisabled(true);
+                setincart(true);
+              }}
+              class="disabled:opacity-50 disabled:bg-gray-900 text-white bg-cyan-700 hover:bg-cyan-800 focus:ring-4 focus:outline-none focus:ring-cyan-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800"
+            >
+              {data.in_stock ? "Add to cart" : "Out of Stock"}
+            </button>
+          )}
+          {incart && (
+            <button
+              disabled={disabled}
+              class="disabled:opacity-50 text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800"
+            >
+              Added to cart
+            </button>
+          )}
         </div>
       </div>
     </div>

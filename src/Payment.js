@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import axios from "axios";
 import { useLocation, useNavigate } from "react-router-dom/dist";
+import { CartContext } from "./CartContext";
 
 const Payment = () => {
   const [clientSecret, setClientSecret] = useState("");
@@ -12,10 +13,10 @@ const Payment = () => {
   const stripe = useStripe();
   const elements = useElements();
   const location = useLocation();
+  const cartContext = useContext(CartContext);
 
   useEffect(() => {
     if (location.state && location.state.order) {
-      console.log(location.state.order);
       setOrder(location.state.order);
       fetchClientSecret(location.state.order);
     }
@@ -76,6 +77,7 @@ const Payment = () => {
             order
           );
           console.log(response);
+          cartContext.checkout();
           navigate("/success", {
             state: { order: order, paymentDetails: paymentIntent },
           });

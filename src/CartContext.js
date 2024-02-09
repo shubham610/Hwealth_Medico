@@ -5,7 +5,7 @@ export const CartContext = createContext(null);
 const getDefaultCart = (data) => {
   let cart = {};
 
-  for (let i = 0; i < data.length; i++) {
+  for (let i = 0; i < data?.length; i++) {
     cart[data[i].id] = 0;
   }
   return cart;
@@ -21,11 +21,10 @@ export const CartContextProvider = (props) => {
     let totalAmount = 0;
 
     for (const item in cartItems) {
-      if (cartItems[item] > 0) { 
+      if (cartItems[item] > 0) {
         let itemInfo = medicines.find((product) => product.id == item);
-        totalAmount += Math.round(
-          cartItems[item] * itemInfo.price.final_price.toFixed(2) * 50
-        );
+        totalAmount += cartItems[item] * (itemInfo.price.final_price * 50);
+        totalAmount.toFixed(2);
       }
     }
 
