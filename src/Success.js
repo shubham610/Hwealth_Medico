@@ -1,8 +1,9 @@
 import React from "react";
-import { useLocation } from "react-router-dom/dist";
+import { useLocation, useNavigate } from "react-router-dom/dist";
 
 const Success = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const paymentDetails = location.state.paymentDetails;
   const order = location.state.order;
   return (
@@ -33,11 +34,9 @@ const Success = () => {
         </div>
 
         <div className="text-center mt-6">
-          <a href="/">
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
-              Back to Home
+            <button onClick={()=>navigate("/myorders")} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+             Go to MyOrders
             </button>
-          </a>
         </div>
       </div>
     </div>
